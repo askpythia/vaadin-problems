@@ -87,11 +87,11 @@ public class DialogGridDetails extends VerticalLayout {
 			grid.setItems(item.getDetails(), detail -> detail.getChildren());
 			
 			grid.addCollapseListener(event -> {
-				resize(parent, event);
+				resize(parent, grid, event);
 			});
 
 			grid.addExpandListener(event -> {
-				resize(parent, event);
+				resize(parent, grid, event);
 			});
 
 			grid.addHierarchyColumn(detail -> detail.getDetail()).setHeader("Details");
@@ -100,8 +100,9 @@ public class DialogGridDetails extends VerticalLayout {
 		}
 	}
 
-	private void resize(Grid<?> parent, ComponentEvent<?> event) {
-		System.out.println(event);
-		UI.getCurrent().getPage().executeJs("$0._resizeHandler()",parent);
+	private void resize(Grid<?> parent, TreeGrid<?> tree, ComponentEvent<?> event) {
+		System.out.println("1" + event);
+		//UI.getCurrent().getPage().executeJs("setTimeout(function() { $0._resizeHandler()}, 100);",parent);
+		UI.getCurrent().getPage().executeJs("new ResizeObserver(e => $0._resizeHandler()).observe($1);", parent.getElement(), tree.getElement());
 	}
 }
