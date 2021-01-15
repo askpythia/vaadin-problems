@@ -4,6 +4,8 @@ import com.generali.fipos.vaadin.data.Item;
 import com.generali.fipos.vaadin.data.Item.Detail;
 import com.vaadin.componentfactory.EnhancedDialog;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.grid.Grid;
@@ -13,6 +15,7 @@ import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.treegrid.CollapseEvent;
 import com.vaadin.flow.component.treegrid.TreeGrid;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 
@@ -35,7 +38,8 @@ public class DialogGridDetails extends VerticalLayout {
 		var dialog = new EnhancedDialog();
 		dialog.setCloseOnEsc(true);
 		dialog.setCloseOnOutsideClick(true);
-		dialog.setResizable(false);
+		dialog.setResizable(true);
+		dialog.setDraggable(true);
 		dialog.setWidth("60vw");
 		dialog.setContent(getGrid(ok));
 		return dialog;
@@ -59,12 +63,12 @@ public class DialogGridDetails extends VerticalLayout {
 			return button;
 		})).setFlexGrow(0).setAutoWidth(false).setWidth("60px").setHeader("Details");
 
-		grid.setItemDetailsRenderer(new ComponentRenderer<Component, Item>(item -> getItemDetailsComponent(item, ok)));
+		grid.setItemDetailsRenderer(new ComponentRenderer<Component, Item>(item -> getItemDetailsComponent(item, ok, grid)));
 
 		return grid;
 	}
 
-	private Component getItemDetailsComponent(Item item, boolean ok) {
+	private Component getItemDetailsComponent(Item item, boolean ok, Grid<?> parent) {
 		if(ok) {
 			Div div = new Div();
 			item.getDetails().forEach(detail -> {
@@ -81,10 +85,23 @@ public class DialogGridDetails extends VerticalLayout {
 			grid.setHeightByRows(true);
 			
 			grid.setItems(item.getDetails(), detail -> detail.getChildren());
+			
+			grid.addCollapseListener(event -> {
+				resize(parent, event);
+			});
+
+			grid.addExpandListener(event -> {
+				resize(parent, event);
+			});
 
 			grid.addHierarchyColumn(detail -> detail.getDetail()).setHeader("Details");
 
 			return grid;
 		}
+	}
+
+	private void resize(Grid<?> parent, ComponentEvent<?> event) {
+		System.out.println(event);
+		UI.getCurrent().getPage().executeJs("$0._resizeHandler()",parent);
 	}
 }
