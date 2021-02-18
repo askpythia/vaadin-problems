@@ -13,6 +13,7 @@ import com.vaadin.flow.component.grid.GridVariant;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.treegrid.CollapseEvent;
@@ -58,10 +59,14 @@ public class DialogGridDetails extends VerticalLayout {
 		grid.addColumn(item -> item.getName()).setHeader("Name");
 		grid.addColumn(new ComponentRenderer<>(item -> {
 			Button button = new Button(grid.isDetailsVisible(item) ? VaadinIcon.MINUS.create() : VaadinIcon.PLUS.create());
-			button.addClickListener(e -> grid.setDetailsVisible(item, !grid.isDetailsVisible(item)));
+			button.addClickListener(e -> {
+				grid.setDetailsVisible(item, !grid.isDetailsVisible(item));
+				grid.select(item);
+			});
 			button.setHeightFull();
 			return button;
 		})).setFlexGrow(0).setAutoWidth(false).setWidth("60px").setHeader("Details");
+		grid.addItemDoubleClickListener(e -> Notification.show("Grid: ItemDoubleClickEvent on " + e.getItem().getName()));
 
 		grid.setItemDetailsRenderer(new ComponentRenderer<Component, Item>(item -> getItemDetailsComponent(item, ok, grid)));
 
@@ -95,6 +100,8 @@ public class DialogGridDetails extends VerticalLayout {
 			});
 
 			grid.addHierarchyColumn(detail -> detail.getDetail()).setHeader("Details");
+			
+			grid.addItemDoubleClickListener(e -> Notification.show("Detail-Treegrid: itemDoubleClickEvent on " + e.getItem().getDetail()));
 
 			return grid;
 		}
