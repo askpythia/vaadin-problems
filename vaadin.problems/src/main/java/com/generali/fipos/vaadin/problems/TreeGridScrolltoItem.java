@@ -5,6 +5,7 @@ import java.util.List;
 import com.generali.fipos.vaadin.data.MapNode;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.page.PendingJavaScriptResult;
 import com.vaadin.flow.component.treegrid.TreeGrid;
 import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.provider.hierarchy.TreeData;
@@ -41,8 +42,14 @@ public class TreeGridScrolltoItem<T> extends VerticalLayout {
 		Button button1 = new Button("scroll to Node <TEST>");
 		button1.addClickListener(e-> {
 			tree.deselect(_node);
+			PendingJavaScriptResult _cacheSize = tree.getElement().executeJs("return document.querySelector('#treegridtest')._cache.effectiveSize;");
 			int _index = tree.getDataCommunicator().getIndex(_node);
-			System.out.println("Scroll to Node with index: "+_index); 
+			_cacheSize.then(String.class, r -> {
+				int _i = Integer.parseInt(r);
+				String _t = _i<_index?"!!!Node NOT found!!!":"Node found";
+				System.out.println("+++ [DEBUG TREE] "+_t);
+				System.out.println("+++ [DEBUG TREE] CacheSize: "+_i+" | Scroll to Node with index: "+_index); 
+			});
 			tree.scrollToIndex(_index);
 			tree.select(_node);
 		});
