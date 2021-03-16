@@ -21,5 +21,6 @@ public class Home extends VerticalLayout {
 		add(new H2("PROBLEM 2 : Vaadin Version: 14.4.7"));
 		add(new RouterLink("Problem in Scrolling to Index in TreeGrid", Dispatcher.class, "TreeGridScrolltoItem"));
 		add(new Paragraph("When a hierarchical TreeGrid is expanded and it is necessary to scroll to an item, that doesn't work, because of the lazy loading. HOW to reproduce: clicking on the Button 'scroll to <TEST>' should scoll to the item <TEST>. But it doesn't (if nodes are expanded). When manually scolling from the end to the beginning and clicking on the button again - it will scroll correctly (maybe after a few tries). Or if the tree is collapsed (recursivly). In the console the NodeIndex of the node is shown, but it doesn't correspond to the rowindex (NodeIndex-1) within the DOM!"));
+		add(new Paragraph("HINT: if the _cache.effectiveSize of the grid is lower than the index of the node to scroll, the node is not reachable. For test a eclipse-console log entry is created which shows the (scrollTo)index and the _cache.effectiveSize value."));
 	} 
 }

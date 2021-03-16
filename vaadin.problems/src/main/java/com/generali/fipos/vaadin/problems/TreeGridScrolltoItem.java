@@ -46,7 +46,7 @@ public class TreeGridScrolltoItem<T> extends VerticalLayout {
 			int _index = tree.getDataCommunicator().getIndex(_node);
 			_cacheSize.then(String.class, r -> {
 				int _i = Integer.parseInt(r);
-				String _t = _i<_index?"!!!Node NOT found!!!":"Node found";
+				String _t = _i<_index?"!!!Node NOT found!!!":"Node found?";
 				System.out.println("+++ [DEBUG TREE] "+_t);
 				System.out.println("+++ [DEBUG TREE] CacheSize: "+_i+" | Scroll to Node with index: "+_index); 
 			});
