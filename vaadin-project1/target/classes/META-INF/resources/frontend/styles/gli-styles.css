@@ -1,0 +1,907 @@
+/* DEFAULT Styling for all Fipos Application(s) */
+body {
+    font-family: var(--lumo-font-family);
+    font-size: var(--lumo-font-size, var(--lumo-font-size-m));
+    line-height: var(--lumo-line-height-m);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    color: var(--lumo-body-text-color);
+    background-color: var(--lumo-base-color);
+  
+	/* 
+	* General(i) Styling (Light Theme) 
+	*/ 
+
+	/* Colors for Generali CI elements */
+	--gli-general-background-color: transparent;
+	
+	--gli-general-color-part: 123, 123, 123;
+	--gli-general-color: rgb(var(--gli-general-color-part));
+	
+	--gli-general-text-color-part: 24, 39, 57;
+	--gli-general-text-color: rgb(var(--gli-general-text-color-part));
+
+	--gli-general-light-color-part: 255, 255, 255;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	--gli-general-light-color-opacity: 1;
+	
+	--gli-general-dark-color-part: 24, 39, 57;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+	
+	--gli-general-border-color: var(--lumo-primary-contrast-color, rgb(215, 215, 215) );
+
+	/* Colors for disabled Generali elements - eg. ButtonCE */  
+	--gli-general-disabled-background-color: var(--lumo-contrast-5pct);
+	--gli-general-disabled-color: rgb(219, 219, 219);
+
+	/* Colors for action-elements - eg. input fields */  
+	--gli-general-action-background-color: rgb(255, 255, 255);
+	--gli-general-action-color: rgb(115, 115, 115);
+ 
+	/* Colors for disabled action-elements - eg. input fields */  
+	--gli-general-action-disabled-background-color: rgb(215, 215, 215);
+	--gli-general-action-disabled-color: rgb(185, 185, 185);
+
+	/* Colors for mandadory action-elements - eg. input fields */  
+	--gli-general-mandadory-background-color: rgba(215, 215, 50, 0.5);
+	--gli-general-mandadory-color: rgb(215, 115, 115);
+	--gli-general-mandadory-border-color: rgb(215, 115, 115);
+
+	/* Colors for selected-elements - eg. lists */  
+	--gli-general-selected-background-color: var(--lumo-shade-20pct);
+	--gli-general-selected-color: var(--lumo-body-text-color);
+	
+	/* Colors for list-elements - eg. menu */  
+	--gli-general-list-background-color: var(--gli-general-light-color);
+	--gli-general-list-color: var(--lumo-body-text-color); 
+	
+	/* LUMO theme Styling */	
+	--lumo-font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	--lumo-font-size: 1rem;
+	--lumo-font-size-xxxl: 1.375rem;
+	--lumo-font-size-xxl: 1.125rem;
+	--lumo-font-size-xl: 1rem;
+	--lumo-font-size-l: 0.875rem;
+	--lumo-font-size-m: 0.75rem;
+	--lumo-font-size-s: 0.6875rem;
+	--lumo-font-size-xs: 0.625rem;
+	--lumo-font-size-xxs: 0.625rem;
+	
+	--lumo-line-height-m: 1.4;
+	--lumo-line-height-s: 1.2;
+	--lumo-line-height-xs: 1.1;
+	
+	--lumo-border-radius: 0.125em;
+
+	--lumo-space-xl: 1.75rem;
+	--lumo-space-l: 1.125rem;
+	--lumo-space-m: 0.5rem;
+	--lumo-space-s: 0.25rem;
+	--lumo-space-xs: 0.125rem;
+
+	--lumo-size-xl: 2.5rem;
+	--lumo-size-l: 2rem;
+	--lumo-size-m: 1.75rem;
+	--lumo-size-s: 1.5rem;
+	--lumo-size-xs: 1.25rem;
+  
+	--lumo-tint-5pct: rgba(var(--gli-general-light-color-part), 0.05);
+	--lumo-tint-10pct: rgba(var(--gli-general-light-color-part), 0.1);
+	--lumo-tint-20pct: rgba(var(--gli-general-light-color-part), 0.2);
+	--lumo-tint-30pct: rgba(var(--gli-general-light-color-part), 0.3);
+	--lumo-tint-40pct: rgba(var(--gli-general-light-color-part), 0.4);
+	--lumo-tint-50pct: rgba(var(--gli-general-light-color-part), 0.5);
+	--lumo-tint-60pct: rgba(var(--gli-general-light-color-part), 0.6);
+	--lumo-tint-70pct: rgba(var(--gli-general-light-color-part), 0.7);
+	--lumo-tint-80pct: rgba(var(--gli-general-light-color-part), 0.8);
+	--lumo-tint-90pct: rgba(var(--gli-general-light-color-part), 0.9);
+	--lumo-tint: var(--gli-general-light-color);
+	
+	--lumo-shade-5pct: rgba(var(--gli-general-dark-color-part), 0.05);
+	--lumo-shade-10pct: rgba(var(--gli-general-dark-color-part), 0.1);
+	--lumo-shade-20pct: rgba(var(--gli-general-dark-color-part), 0.2);
+	--lumo-shade-30pct: rgba(var(--gli-general-dark-color-part), 0.3);
+	--lumo-shade-40pct: rgba(var(--gli-general-dark-color-part), 0.4);
+	--lumo-shade-50pct: rgba(var(--gli-general-dark-color-part), 0.5);
+	--lumo-shade-60pct: rgba(var(--gli-general-dark-color-part), 0.6);
+	--lumo-shade-70pct: rgba(var(--gli-general-dark-color-part), 0.7);
+	--lumo-shade-80pct: rgba(var(--gli-general-dark-color-part), 0.8);
+	--lumo-shade-90pct: rgba(var(--gli-general-dark-color-part), 0.9);
+	--lumo-shade: var(--gli-general-dark-color);  
+	
+	/* App Background Color */
+	--lumo-base-color: var(--gli-general-light-color); 
+  		
+	--lumo-primary-text-color: var(--gli-general-text-color);
+	--lumo-primary-color: var(--gli-general-color);
+	--lumo-primary-color-50pct: rgba(var(--gli-general-color-part), 0.5);
+	--lumo-primary-color-10pct: rgba(var(--gli-general-color-part), 0.1);
+	--lumo-primary-contrast-color: var(--lumo-tint-90pct);
+
+	/* Readonly & disabled Color */
+	--lumo-secondary-text-color: var(--lumo-contrast-70pct);
+	--lumo-disabled-text-color: var(--lumo-secondary-text-color);
+	--lumo-disabled-background-color: transparent;
+		
+	--lumo-required-field-indicator: "\2055";
+	
+	/*  
+	* CUSTOM (GLI) Components
+	*/
+	
+	/* Image Carousel (app landing page) */
+	/* RSC: (only) CHANGE perspective and transformz to tighten or loosen the appearance */ 
+	/* Wide */
+	/*
+	--gli-image-carousel-perspective: 35vw;
+    --gli-image-carousel-transformz: -75vw;
+    */
+    /* Normal */
+    /*
+	--gli-image-carousel-perspective: 155vw;
+    --gli-image-carousel-transformz: -50vw;
+    */
+    /* Narrow (Default) */
+	--gli-image-carousel-perspective: 250vw;
+    --gli-image-carousel-transformz: -45vw;
+    
+    /* (image)Dimensions (can be changed too for appearance) 5:3 image-ratio */
+    /* fixed dimensions (needed 4 bending effect) */
+    /*
+    --gli-image-carousel-img-width: 300px;
+    --gli-image-carousel-img-height: 200px;
+    --gli-image-carousel-height: 320px;
+    */
+    /* dimensions depending on screen-width */
+    --gli-image-carousel-img-width: 20vw;
+    --gli-image-carousel-img-height: 12vw;
+    --gli-image-carousel-height: 22vw;
+    
+    --gli-image-carousel-margin: 2vh;
+    
+    --gli-image-carousel-width: 100%;
+    --gli-image-carousel-transition: 1s;
+        	
+	/* Colors for links (linkce) */
+	--gli-linkce-link-color: rgb(0, 0, 255);
+	--gli-linkce-visited-link-color: rgb(128, 0, 128);
+	
+	/* Mapping Widget Styles */
+	--gli-mapping-widget-height: 650px;
+	--gli-mapping-widget-background-color: rgb(255,255,255);
+	--gli-mapping-widget-color: rgb(125,125,125);
+
+	--gli-mapping-widget-canvas-height: 100%;
+	--gli-mapping-widget-canvas-background-color: rgb(245,245,245);
+	--gli-mapping-widget-canvas-ribbon-width: 5px;
+	
+	--gli-mapping-widget-treegrid-width: 200px;
+	--gli-mapping-widget-treegrid-background-color: rgb(225,225,235);
+	--gli-mapping-widget-treegrid-cell-background-color: rgb(245,245,235);
+
+	--gli-mapping-widget-linegrid-height: 200px;
+}
+
+/* Dark Theme TBD */
+[theme~="dark"] {
+	/*
+	--gli-general-color-part: 187, 0, 0;
+	--gli-general-text-color-part: 187, 0, 0;
+
+	--lumo-primary-text-color: rgb(var(--gli-general-text-color-part));
+  	--lumo-primary-color-50pct: rgba(var(--gli-general-color-part), 0.5);
+  	--lumo-primary-color-10pct: rgba(var(--gli-general-color-part), 0.1);
+  	--lumo-primary-color: rgb(var(--gli-general-color-part));
+  	*/
+  	--lumo-primary-color: var(--lumo-contrast-50pct);
+  	
+}
+
+/* GENERALI CI */
+[theme~="generali"] {
+
+	/* Colors for Generali CI elements */
+	--gli-general-background-color: transparent;
+
+	--gli-general-color-part: 153, 0, 0;
+	--gli-general-color: rgb(var(--gli-general-color-part));
+
+	--gli-general-light-color-part: 255, 255, 255;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	
+	--gli-general-dark-color-part: 24, 39, 57;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+  	
+	--gli-general-border-color: var(--lumo-primary-contrast-color);
+	
+  	--lumo-base-color: var(--gli-general-light-color);
+  	--lumo-primary-color: var(--gli-general-color);
+	--lumo-primary-contrast-color: var(--lumo-tint-90pct);
+
+	/* --lumo-body-text-color: var(--gli-general-color); */
+  	--lumo-header-text-color: var(--gli-general-color);
+	--lumo-secondary-text-color: var(--lumo-contrast-70pct);
+	
+	--lumo-tint-5pct: rgba(var(--gli-general-light-color-part), 0.05);
+	--lumo-tint-10pct: rgba(var(--gli-general-light-color-part), 0.1);
+	--lumo-tint-20pct: rgba(var(--gli-general-light-color-part), 0.2);
+	--lumo-tint-30pct: rgba(var(--gli-general-light-color-part), 0.3);
+	--lumo-tint-40pct: rgba(var(--gli-general-light-color-part), 0.4);
+	--lumo-tint-50pct: rgba(var(--gli-general-light-color-part), 0.5);
+	--lumo-tint-60pct: rgba(var(--gli-general-light-color-part), 0.6);
+	--lumo-tint-70pct: rgba(var(--gli-general-light-color-part), 0.7);
+	--lumo-tint-80pct: rgba(var(--gli-general-light-color-part), 0.8);
+	--lumo-tint-90pct: rgba(var(--gli-general-light-color-part), 0.9);
+	--lumo-tint: var(--gli-general-light-color);
+	
+	--lumo-shade-5pct: rgba(var(--gli-general-dark-color-part), 0.05);
+	--lumo-shade-10pct: rgba(var(--gli-general-dark-color-part), 0.1);
+	--lumo-shade-20pct: rgba(var(--gli-general-dark-color-part), 0.2);
+	--lumo-shade-30pct: rgba(var(--gli-general-dark-color-part), 0.3);
+	--lumo-shade-40pct: rgba(var(--gli-general-dark-color-part), 0.4);
+	--lumo-shade-50pct: rgba(var(--gli-general-dark-color-part), 0.5);
+	--lumo-shade-60pct: rgba(var(--gli-general-dark-color-part), 0.6);
+	--lumo-shade-70pct: rgba(var(--gli-general-dark-color-part), 0.7);
+	--lumo-shade-80pct: rgba(var(--gli-general-dark-color-part), 0.8);
+	--lumo-shade-90pct: rgba(var(--gli-general-dark-color-part), 0.9);
+	--lumo-shade: var(--gli-general-dark-color);  
+
+	--lumo-contrast-5pct: var(--lumo-shade-5pct);
+    --lumo-contrast-10pct: var(--lumo-shade-10pct);
+    --lumo-contrast-20pct: var(--lumo-shade-20pct);
+    --lumo-contrast-30pct: var(--lumo-shade-30pct);
+    --lumo-contrast-40pct: var(--lumo-shade-40pct);
+    --lumo-contrast-50pct: var(--lumo-shade-50pct);
+    --lumo-contrast-60pct: var(--lumo-shade-60pct);
+    --lumo-contrast-70pct: var(--lumo-shade-70pct);
+    --lumo-contrast-80pct: var(--lumo-shade-80pct);
+    --lumo-contrast-90pct: var(--lumo-shade-90pct);
+
+	--gli-general-disabled-background-color: rgb(183, 137, 137);
+	--gli-general-disabled-color: rgb(219, 198, 198);
+	
+	--gli-general-selected-background-color: rgba(215, 165, 165, 0.5);
+	--gli-general-selected-color: var(--lumo-body-text-color); 
+   
+}
+
+/* Example Themes - not 4 production! */
+[theme~="spring"] {
+  
+  	/* Custom */
+  	--gli-general-background-color: transparent;
+  	
+  	--gli-general-color-part: 44, 189, 0;
+	--gli-general-color: rgb(var(--gli-general-color-part));
+			
+	--gli-general-text-color-part: 24, 39, 57;
+	--gli-general-text-color: rgb(var(--gli-general-text-color-part));
+
+	/* --gli-general-light-color-part: 186, 247, 187; */
+	--gli-general-light-color-part: 250, 250, 250;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	
+	--gli-general-dark-color-part: 0, 112, 24;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+  
+  	--lumo-base-color: rgb(235, 255, 225);
+  
+  --lumo-primary-contrast-color: rgb(177, 240, 5);
+  --lumo-primary-text-color: var(--lumo-primary-color);
+
+  --lumo-body-text-color: rgba(69, 147, 1, 0.9);
+
+  --lumo-error-text-color: rgb(231, 24, 24);
+  --lumo-error-color-50pct: rgba(231, 24, 24, 0.5);
+  --lumo-error-color-10pct: rgba(231, 24, 24, 0.1);
+  --lumo-error-color: hsl(0, 81%, 50%);
+  --lumo-error-contrast-color: rgb(245, 199, 168);
+  
+  --lumo-success-text-color: rgb(4, 174, 30);
+  --lumo-success-color-50pct: rgba(8, 217, 39, 0.5);
+  --lumo-success-color-10pct: rgba(8, 217, 39, 0.1);
+  --lumo-success-color: hsl(129, 93%, 44%);
+  --lumo-success-contrast-color: hsl(159, 86%, 33%);
+
+  --lumo-header-text-color: hsl(131, 97%, 37%);
+
+}
+
+[theme~="summer"] {
+	  /* Custom */
+  	--gli-general-background-color: transparent;
+  	
+	--gli-general-color-part: var(--lumo-primary-color-part);
+	--gli-general-color: rgb(var(--gli-general-color-part));
+	
+	--gli-general-text-color-part: 24, 39, 57;
+	--gli-general-text-color: rgb(var(--gli-general-text-color-part));
+
+	/* --gli-general-light-color-part: 246, 247, 186; */
+	--gli-general-light-color-part: 250, 250, 250;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	
+	--gli-general-dark-color-part: 143, 99, 5;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+  
+  --lumo-base-color: rgb(255, 253, 224);
+  
+  --lumo-primary-color-part: 235, 89, 5;
+  --lumo-primary-color: rgb(var(--lumo-primary-color-part));
+  --lumo-primary-color-50pct: rgba(var(--lumo-primary-color-part), 0.5);
+  --lumo-primary-color-10pct: rgba(var(--lumo-primary-color-part), 0.1);
+  
+  --lumo-primary-contrast-color: #eccc18;
+  --lumo-primary-text-color: rgb(81, 169, 4);
+  
+  --lumo-error-color: hsl(0, 81%, 50%);
+  --lumo-error-contrast-color: #f5c7a8;  
+  --lumo-error-text-color: rgb(231, 24, 24);
+  --lumo-error-color-50pct: rgba(231, 24, 24, 0.5);
+  --lumo-error-color-10pct: rgba(231, 24, 24, 0.1);
+    
+  --lumo-success-color: hsl(129, 93%, 44%);
+  --lumo-success-contrast-color: hsl(159, 86%, 33%);
+  --lumo-success-text-color: rgb(4, 174, 30);
+  --lumo-success-color-50pct: rgba(8, 217, 39, 0.5);
+  --lumo-success-color-10pct: rgba(8, 217, 39, 0.1);
+   
+  --lumo-header-text-color: hsl(115, 99%, 28%);
+  --lumo-body-text-color: rgba(1, 137, 53, 0.9);
+  
+  }
+[theme~="autumn"] {
+	  /* Custom */
+  	--gli-general-background-color: transparent;
+  	
+	--gli-general-color-part: var(--lumo-primary-color-part);
+	--gli-general-color: rgb(var(--gli-general-color-part));
+	
+	--gli-general-text-color-part: 24, 39, 57;
+	--gli-general-text-color: rgb(var(--gli-general-text-color-part));
+
+	/* --gli-general-light-color-part: 248, 229, 84; */
+	--gli-general-light-color-part: 250, 250, 250;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	
+	--gli-general-dark-color-part: 112, 56, 0;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+	
+  	--lumo-base-color: rgb(254, 245, 233);
+  
+  --lumo-primary-color-part: 189, 135, 0;
+  --lumo-primary-color: rgb(var(--lumo-primary-color-part));
+  --lumo-primary-color-50pct: rgba(var(--lumo-primary-color-part), 0.5);
+  --lumo-primary-color-10pct: rgba(var(--lumo-primary-color-part), 0.1);
+
+  --lumo-primary-contrast-color: #f0ad05;
+  --lumo-primary-text-color: rgb(200, 164, 4);
+  
+  --lumo-error-text-color: rgb(231, 24, 24);
+  --lumo-error-color-50pct: rgba(231, 24, 24, 0.5);
+  --lumo-error-color-10pct: rgba(231, 24, 24, 0.1);
+  --lumo-error-color: hsl(0, 81%, 50%);
+  --lumo-error-contrast-color: #f5c7a8;
+  
+  --lumo-success-text-color: rgb(4, 174, 30);
+  --lumo-success-color-50pct: rgba(8, 217, 39, 0.5);
+  --lumo-success-color-10pct: rgba(8, 217, 39, 0.1);
+  --lumo-success-color: hsl(129, 93%, 44%);
+  --lumo-success-contrast-color: hsl(43, 86%, 33%);
+  
+  --lumo-header-text-color: hsl(37, 96%, 43%);
+  --lumo-body-text-color: rgba(147, 79, 1, 0.9);
+}
+[theme~="winter"] {
+	  /* Custom */
+  	--gli-general-background-color: transparent;
+  	
+	--gli-general-color-part: var(--lumo-primary-color-part);
+	--gli-general-color: rgb(var(--gli-general-color-part));
+	
+	--gli-general-text-color-part: 24, 39, 57;
+	--gli-general-text-color: rgb(var(--gli-general-text-color-part));
+
+	/* --gli-general-light-color-part: 193, 243, 250; */
+	--gli-general-light-color-part: 250, 250, 250;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+
+	--gli-general-dark-color-part: 3, 145, 201;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+
+  	--lumo-base-color: rgb(236, 253, 255);
+  			
+  --lumo-primary-color-part: 0, 142, 189;
+  --lumo-primary-color: rgb(var(--lumo-primary-color-part));
+  --lumo-primary-color-50pct: rgba(var(--lumo-primary-color-part), 0.5);
+  --lumo-primary-color-10pct: rgba(var(--lumo-primary-color-part), 0.1);
+
+  --lumo-primary-contrast-color: rgb(5 240 232);
+  --lumo-primary-text-color: rgb(0, 142, 189);
+    
+  --lumo-error-text-color: rgb(231, 24, 24);
+  --lumo-error-color-50pct: rgba(231, 24, 24, 0.5);
+  --lumo-error-color-10pct: rgba(231, 24, 24, 0.1);
+  --lumo-error-color: hsl(0, 81%, 50%);
+  --lumo-error-contrast-color: #f5c7a8;
+  
+  --lumo-success-text-color: rgb(4, 98, 174);
+  --lumo-success-color-50pct: rgba(8, 217, 39, 0.5);
+  --lumo-success-color-10pct: rgba(8, 217, 39, 0.1);
+  --lumo-success-color: hsl(129, 93%, 44%);
+  --lumo-success-contrast-color: hsl(194, 86%, 33%);
+  
+  --lumo-header-text-color: hsl(207, 96%, 43%);
+  --lumo-body-text-color: rgba(1, 76, 147, 0.9);
+
+}
+
+/* Sizing Themes */
+[theme~="xsmall"] {
+  --lumo-space-xl: 1.75rem;
+  --lumo-space-l: 1.125rem;
+  --lumo-space-m: 0.5rem;
+  --lumo-space-s: 0.25rem;
+  --lumo-space-xs: 0.125rem;
+  
+  --lumo-size-xl: 2.5rem;
+  --lumo-size-l: 2rem;
+  --lumo-size-m: 1.75rem;
+  --lumo-size-s: 1.5rem;
+  --lumo-size-xs: 1.25rem;
+
+	--lumo-font-size: 1rem;
+	--lumo-font-size-xxxl: 1.375rem;
+	--lumo-font-size-xxl: 1.125rem;
+	--lumo-font-size-xl: 1rem;
+	--lumo-font-size-l: 0.875rem;
+	--lumo-font-size-m: 0.75rem;
+	--lumo-font-size-s: 0.6875rem;
+	--lumo-font-size-xs: 0.625rem;
+	--lumo-font-size-xxs: 0.625rem;  
+}
+
+[theme~="small"] {
+  --lumo-space-xl: 2.5rem;
+  --lumo-space-l: 1.75rem;
+  --lumo-space-m: 1.125rem;
+  --lumo-space-s: 0.75rem;
+  --lumo-space-xs: 0.375rem;
+  
+  --lumo-size-xl: 3rem;
+  --lumo-size-l: 2.5rem;
+  --lumo-size-m: 2rem;
+  --lumo-size-s: 1.75rem;
+  --lumo-size-xs: 1.5rem;
+
+  --lumo-font-size: 1rem;
+  --lumo-font-size-xxxl: 1.75rem;
+  --lumo-font-size-xxl: 1.375rem;
+  --lumo-font-size-xl: 1.125rem;
+  --lumo-font-size-l: 1rem;
+  --lumo-font-size-m: 0.875rem;
+  --lumo-font-size-s: 0.8125rem;
+  --lumo-font-size-xs: 0.75rem;
+  --lumo-font-size-xxs: 0.6875rem;  
+}
+
+[theme~="medium"] {
+  --lumo-space-xl: 2.5rem;
+  --lumo-space-l: 1.75rem;
+  --lumo-space-m: 1.125rem;
+  --lumo-space-s: 0.75rem;
+  --lumo-space-xs: 0.375rem;
+  
+  --lumo-size-xl: 3.5rem;
+  --lumo-size-l: 2.75rem;
+  --lumo-size-m: 2.25rem;
+  --lumo-size-s: 1.875rem;
+  --lumo-size-xs: 1.625rem;
+
+	--lumo-font-size: 1rem;
+    --lumo-font-size-xxxl: 2.5rem;  
+    --lumo-font-size-xxl: 1.75rem;
+    --lumo-font-size-xl: 1.375rem;
+	--lumo-font-size-l: 1.125rem;
+    --lumo-font-size-m: 1rem;
+    --lumo-font-size-s: .875rem;
+    --lumo-font-size-xs: .8125rem;
+	--lumo-font-size-xxs: .75rem;
+}
+
+[theme~="large"] {
+  --lumo-space-xl: 2.5rem;
+  --lumo-space-l: 1.75rem;
+  --lumo-space-m: 1.125rem;
+  --lumo-space-s: 0.75rem;
+  --lumo-space-xs: 0.375rem;
+  
+  --lumo-size-xl: 4rem;
+  --lumo-size-l: 3rem;
+  --lumo-size-m: 2.5rem;
+  --lumo-size-s: 2rem;
+  --lumo-size-xs: 1.75rem;
+
+  --lumo-font-size: 1rem;
+  --lumo-font-size-xxxl: 3rem;
+  --lumo-font-size-xxl: 2.25rem;
+  --lumo-font-size-xl: 1.75rem;
+  --lumo-font-size-l: 1.375rem;
+  --lumo-font-size-m: 1.125rem;
+  --lumo-font-size-s: 1rem;
+  --lumo-font-size-xs: 0.875rem;
+  --lumo-font-size-xxs: 0.8125rem;  
+}
+
+[theme~="xlarge"] {
+  --lumo-space-xl: 2.5rem;
+  --lumo-space-l: 1.75rem;
+  --lumo-space-m: 1.125rem;
+  --lumo-space-s: 0.75rem;
+  --lumo-space-xs: 0.375rem;
+  
+  --lumo-size-xl: 5rem;
+  --lumo-size-l: 4rem;
+  --lumo-size-m: 3.5rem;
+  --lumo-size-s: 3rem;
+  --lumo-size-xs: 2.25rem;
+
+  --lumo-font-size: 1rem;
+  --lumo-font-size-xxxl: 3.5rem;
+  --lumo-font-size-xxl: 2.75rem;
+  --lumo-font-size-xl: 2.25rem;
+  --lumo-font-size-l: 1.75rem;
+  --lumo-font-size-m: 1.375rem;
+  --lumo-font-size-s: 1.125rem;
+  --lumo-font-size-xs: 1rem;
+  --lumo-font-size-xxs: 0.875rem; 
+    
+}
+
+/* GLI Custom Default Styling */    	
+vaadin-button, vaadin-menu-bar-button, vaadin-menu-bar {
+  	/* Button (CE) Styling */
+	/* --gli-button-ce-background-color: var(--gli-general-color); */
+	--gli-button-ce-background-color: rgba(var(--gli-general-color-part), 0.5);
+    --gli-button-ce-color: var(--gli-general-dark-color);
+  	--gli-button-ce-border-radius: 4px 4px 4px 4px;
+  	
+  	--gli-button-ce-disabled-background-color: var(--gli-general-disabled-background-color);
+  	--gli-button-ce-disabled-color: var(--gli-general-disabled-color);
+  	
+  	--gli-button-cewizard-background-color: rgb(0, 64, 128);
+  	--gli-button-cewizard-color: var(--gli-general-light-color, rgb(255, 255, 255));
+  	--gli-button-cewizard-border-radius: 4px 4px 4px 4px;
+  	
+  	--gli-button-cewizard-disabled-background-color: rgb(127, 135, 161);
+  	--gli-button-cewizard-disabled-color: rgb(202, 202, 202);
+}
+[theme~="generali"] vaadin-button, vaadin-button[theme~="generali"],
+[theme~="generali"] vaadin-menu-bar-button, vaadin-menu-bar-button[theme~="generali"], 
+[theme~="generali"] vaadin-menu-bar, vaadin-menu-bar[theme~="generali"],
+[theme~="error"] vaadin-button, vaadin-button[theme~="error"],
+[theme~="warning"] vaadin-button, vaadin-button[theme~="warning"],
+[theme~="success"] vaadin-button, vaadin-button[theme~="success"],
+[theme~="info"] vaadin-button, vaadin-button[theme~="info"] {
+	--gli-button-ce-background-color: var(--gli-general-color);
+  	--gli-button-ce-color: var(--gli-general-light-color);
+}
+
+/*
+	* Styles for dialog (overlays)
+*/
+
+vcf-enhanced-dialog-overlay {
+	/* GENERAL/default colors */
+	/*
+	--gli-general-color: var(--lumo-shade-10pct); 
+	
+	--gli-general-light-color-part: 255,255,255;
+	--gli-general-light-color: rgb(var(--gli-general-light-color-part));
+	*/
+	--gli-general-dark-color-part: 35, 35, 35;
+	--gli-general-dark-color: rgb(var(--gli-general-dark-color-part));
+	
+  	--lumo-base-color: var(--gli-general-light-color);
+  	--lumo-body-text-color: var(--gli-general-dark-color);
+  	
+  	--lumo-primary-color-part: var(--gli-general-dark-color-part);
+ 	--lumo-primary-color: rgb(var(--lumo-primary-color-part));
+  	--lumo-primary-color-50pct: rgba(var(--lumo-primary-color-part), 0.5);
+  	--lumo-primary-color-10pct: rgba(var(--lumo-primary-color-part), 0.1);
+  	  	
+	--lumo-tint-5pct: rgba(var(--gli-general-light-color-part), 0.05);
+	--lumo-tint-10pct: rgba(var(--gli-general-light-color-part), 0.1);
+	--lumo-tint-20pct: rgba(var(--gli-general-light-color-part), 0.2);
+	--lumo-tint-30pct: rgba(var(--gli-general-light-color-part), 0.3);
+	--lumo-tint-40pct: rgba(var(--gli-general-light-color-part), 0.4);
+	--lumo-tint-50pct: rgba(var(--gli-general-light-color-part), 0.5);
+	--lumo-tint-60pct: rgba(var(--gli-general-light-color-part), 0.6);
+	--lumo-tint-70pct: rgba(var(--gli-general-light-color-part), 0.7);
+	--lumo-tint-80pct: rgba(var(--gli-general-light-color-part), 0.8);
+	--lumo-tint-90pct: rgba(var(--gli-general-light-color-part), 0.9);
+	--lumo-tint: var(--gli-general-light-color);
+	
+	--lumo-shade-5pct: rgba(var(--gli-general-dark-color-part), 0.05);
+	--lumo-shade-10pct: rgba(var(--gli-general-dark-color-part), 0.1);
+	--lumo-shade-20pct: rgba(var(--gli-general-dark-color-part), 0.2);
+	--lumo-shade-30pct: rgba(var(--gli-general-dark-color-part), 0.3);
+	--lumo-shade-40pct: rgba(var(--gli-general-dark-color-part), 0.4);
+	--lumo-shade-50pct: rgba(var(--gli-general-dark-color-part), 0.5);
+	--lumo-shade-60pct: rgba(var(--gli-general-dark-color-part), 0.6);
+	--lumo-shade-70pct: rgba(var(--gli-general-dark-color-part), 0.7);
+	--lumo-shade-80pct: rgba(var(--gli-general-dark-color-part), 0.8);
+	--lumo-shade-90pct: rgba(var(--gli-general-dark-color-part), 0.9);
+	--lumo-shade: var(--gli-general-dark-color);  	
+
+	/* Dialogs: defaults */
+	/*
+	--fipos-dialog-background-color: var(--gli-general-color);
+	--fipos-dialog-color: var(--lumo-body-text-color); 
+
+  	--fipos-dialog-header-background-color: var(--fipos-dialog-background-color); 	
+  	--fipos-dialog-header-color: var(--fipos-dialog-color); 
+	*/
+
+  	/* --fipos-dialog-content-background-color: var(--lumo-tint-90pct);  */	
+	--fipos-dialog-content-background-color: rgba(var(--gli-general-light-color-part), var(--gli-general-light-color-opacity, 1) ); 
+  	--fipos-dialog-content-color: var(--fipos-dialog-color);
+	--fipos-dialog-content-image-width: 75px;
+	--fipos-dialog-content-image-heigt: 75px;
+  
+	/* --fipos-dialog-footer-background-color: rgba(var(--gli-general-light-color-part), var(--gli-general-light-color-opacity, 1) ); */ 
+  	--fipos-dialog-footer-background-color: var(--lumo-tint-90pct);
+  	--fipos-dialog-footer-color: var(--lumo-body-text-color);
+  	
+  	/* States and severities */
+  	--fipos-dialog-error-background-color: rgb(244, 67, 54);
+  	--fipos-dialog-warning-background-color: rgb(255, 152, 0);
+  	--fipos-dialog-success-background-color: rgb(76, 175, 80);
+  	--fipos-dialog-info-background-color: rgb(33, 150, 243);
+}
+[theme~="dark"] vcf-enhanced-dialog-overlay {
+    /* --fipos-dialog-background-color: rgb(105, 105, 105); */
+    --fipos-dialog-content-background-color: var(--lumo-tint-10pct);
+    --fipos-dialog-footer-background-color: var(--lumo-tint-10pct);
+}
+
+vcf-enhanced-dialog-overlay[theme~="generali"], [theme~="generali"] vcf-enhanced-dialog-overlay,
+vcf-enhanced-dialog-overlay[theme~="error"],
+vcf-enhanced-dialog-overlay[theme~="warning"],
+vcf-enhanced-dialog-overlay[theme~="success"],
+vcf-enhanced-dialog-overlay[theme~="info"] {
+  	--fipos-dialog-header-background-color: var(--gli-general-color);  
+  	--fipos-dialog-header-color: var(--gli-general-light-color, --lumo-body-text-color);
+}
+
+vcf-enhanced-dialog-overlay[theme~="generali"], [theme~="generali"] vcf-enhanced-dialog-overlay {
+	--gli-general-light-color-opacity: 1;
+	--gli-general-light-color: rgba(var(--gli-general-light-color-part), var(--gli-general-light-color-opacity));
+	/* overrule severity colors */
+	--fipos-dialog-error-background-color: var(--gli-general-color);
+  	--fipos-dialog-warning-background-color: var(--gli-general-color);
+  	--fipos-dialog-success-background-color: var(--gli-general-color);
+  	--fipos-dialog-info-background-color: var(--gli-general-color);
+}
+
+vcf-enhanced-dialog-overlay[theme~="tinted"]  {
+	
+	--fipos-dialog-header-background-color: var(--lumo-tint-70pct); 	
+  	--fipos-dialog-header-color: var(--lumo-body-text-color); 
+	
+  	--fipos-dialog-header-error-color: var(--fipos-dialog-error-background-color); 
+	--fipos-dialog-header-error-background-color: var(--fipos-dialog-header-background-color); 
+  	
+  	--fipos-dialog-header-warning-color: var(--fipos-dialog-warning-background-color);
+  	--fipos-dialog-header-warning-background-color: var(--fipos-dialog-header-background-color);  
+  	
+  	--fipos-dialog-header-info-color: var(--fipos-dialog-info-background-color); 
+  	--fipos-dialog-header-info-background-color: var(--fipos-dialog-header-background-color); 
+  	
+  	--fipos-dialog-header-success-color: var(--fipos-dialog-success-background-color);
+  	--fipos-dialog-header-success-background-color: var(--fipos-dialog-header-background-color);  
+
+}
+
+/*
+	* Styles for checkboxes, radiobuttons
+*/
+
+vaadin-checkbox, 
+vaadin-radio-group {
+	/* TOGGLE/Switch Checkbox Defaults */
+	--checkbox-switch-base-width: var(--lumo-size-m);
+	--checkbox-switch-base-height: calc(var(--lumo-size-m) / 2);
+	
+  	--checkbox-switch-gap: 0.25rem;
+  	--checkbox-switch-height: calc(var(--checkbox-switch-base-height) + var(--checkbox-switch-gap) * 2);
+  	--checkbox-switch-width: calc(var(--checkbox-switch-base-width) + var(--checkbox-switch-gap) * 2);
+  	
+  	--checkbox-switch-border-radius: var(--checkbox-switch-base-height);
+  	--checkbox-switch-border-color: var(--checkbox-switch-color);
+  	--checkbox-switch-border-width: 0px;
+  	
+  	/* Default/OFF state */
+  	--checkbox-switch-color: rgb(115,115,115);
+  	/* --checkbox-switch-label-color: rgb(125,25,25); */
+  	--checkbox-switch-background-color: var(--lumo-contrast-20pct, rgb(225, 225, 225));
+	/* --checkbox-switch-disabled-background-color: var(--lumo-contrast-10pct); */
+  	--checkbox-switch-thumb-box-color: var(--checkbox-switch-background-color);
+  	/* Custom Hover */
+  	/* --checkbox-switch-hover-background-color: rgb(165,165,165); */
+
+	/* THUMB Style */
+  	--checkbox-switch-thumb-width: var(--checkbox-switch-height);
+  	--checkbox-switch-thumb-height: var(--checkbox-switch-height);
+  	--checkbox-switch-thumb-background-color: rgb(255, 255, 255);
+  	/* --checkbox-switch-thumb-disabled-background-color: var(--lumo-contrast-10pct); */
+
+	/* Checked state */
+  	/* --checkbox-switch-checked-label-color: rgb(25,125,25); */
+  	/* --checkbox-switch-checked-background-color: rgb(125,225,125); */
+	/* --checkbox-switch-checked-disabled-background-color: var(--lumo-contrast-5pct , rgb(125,125,125) ); */
+  	--checkbox-switch-checked-background-color: rgb(25, 125, 25); /* var(--lumo-primary-color); */
+	--checkbox-switch-checked-hover-background-color: rgba(25, 125, 25 , 0.5);
+
+  	--checkbox-switch-thumb-checked-box-color: var(--checkbox-switch-checked-background-color);
+}
+
+[theme~="dark"] vaadin-checkbox {
+  	--checkbox-switch-color: rgb(35, 35, 35);
+  	/* --checkbox-switch-background-color: rgb(125, 125, 125); */
+  	/* --checkbox-switch-checked-background-color: rgb(25, 125, 25); */
+  	--checkbox-switch-thumb-background-color: rgb(55, 55, 55);
+  	--checkbox-switch-thumb-checked-background-color: rgb(55, 55, 55);
+}
+
+vaadin-checkbox[theme~="pushbutton"],
+vaadin-radio-group[theme~="pushbutton"] {
+	--checkbox-switch-base-width: var(--lumo-size-xs);
+    --checkbox-switch-base-height: var(--lumo-size-xs);
+	--checkbox-switch-gap: 8px;
+    --checkbox-switch-height: calc(var(--checkbox-switch-base-height) - var(--checkbox-switch-gap));
+    --checkbox-switch-width: calc(var(--checkbox-switch-base-width) - var(--checkbox-switch-gap));
+
+    --checkbox-switch-border-radius: calc(var(--checkbox-switch-base-height) / 6);
+    --checkbox-switch-border-width: 0px;
+    
+	--checkbox-switch-background-color: rgb(225,225,225);
+    --checkbox-switch-checked-background-color: transparent; /* rgb(225,225,225); */
+    
+    --checkbox-switch-hover-background-color: var(--lumo-tint-90pct);
+	--checkbox-switch-checked-hover-background-color: var(--lumo-tint-90pct);
+    
+    --checkbox-switch-thumb-background-color: var(--lumo-shade-20pct);
+    --checkbox-switch-thumb-checked-background: var(--lumo-shade-20pct);
+    
+    /*
+    --checkbox-switch-default-image: url(./images/system/symbols/gli-foldertree-fill.svg);
+    --checkbox-switch-checked-image: url(./images/system/symbols/gli-foldertree-right-fill.svg);
+    */
+}
+vaadin-radio-group[theme~="switch"] {
+	--checkbox-switch-gap: 0px;
+	--checkbox-switch-thumb-checked-background-color: var(--gli-general-light-color, rgb(225,225,225));
+}
+
+vaadin-radio-group[theme~="pushbutton"] {
+	--checkbox-switch-thumb-checked-background-color: var(--lumo-tint-10pct);
+}
+	
+vaadin-checkbox[theme~="switch"][theme~="pushbutton"],
+vaadin-radio-group[theme~="switch"][theme~="pushbutton"] {
+	/*
+	--checkbox-switch-base-width: calc(var(--lumo-size-xs) * 2);
+    --checkbox-switch-base-height: var(--lumo-size-xs);
+    */
+    --checkbox-switch-gap: 0px; 
+    
+    --checkbox-switch-thumb-checked-background: var(--lumo-shade-20pct);
+}
+vaadin-checkbox[theme~="switch"][theme~="pushbutton"] {
+	--checkbox-switch-base-width: calc(var(--lumo-size-xs) * 2);
+    --checkbox-switch-base-height: var(--lumo-size-xs);
+}
+vaadin-checkbox[theme~="switch"][theme~="pushbutton"].foldertree {
+	--checkbox-switch-default-image: url(images/system/symbols/gli-foldertree-fill.svg);
+	--checkbox-switch-checked-image: url(images/system/symbols/gli-foldertree-right-fill.svg);
+	margin: 3px;
+}
+
+vaadin-radio-group[theme~="switch"][theme~="pushbutton"] {
+	--checkbox-switch-base-width: var(--lumo-size-m);
+	--checkbox-switch-base-height: calc( var(--lumo-size-m) / 2);
+}
+
+vaadin-checkbox[theme~="generali"],
+vaadin-radio-group[theme~="generali"]  {
+	--checkbox-switch-checked-background-color: var(--lumo-primary-color);
+	--checkbox-switch-checked-hover-background-color: rgba(153, 0 ,0 , 0.5);
+}
+	
+vaadin-checkbox[theme~="greenred"],
+vaadin-radio-group[theme~="greenred"]  {
+  	--checkbox-switch-background-color: rgb(225, 125, 125);
+  	--checkbox-switch-thumb-background-color: rgb(125, 25, 25);
+  	--checkbox-switch-hover-background-color: rgba(225, 125, 125, 0.5);  	
+  	
+  	--checkbox-switch-checked-background-color: rgb(125, 225, 125);
+  	--checkbox-switch-thumb-checked-background-color: rgb(25,125,25);
+  	--checkbox-switch-checked-hover-background-color: rgba(125, 225, 125, 0.5);
+}
+
+vaadin-checkbox[theme~="rectangle"],
+vaadin-radio-group[theme~="rectangle"] {
+	/*
+  	--checkbox-switch-height: calc(1em + var(--checkbox-switch-gap) * 2);
+  	--checkbox-switch-width: calc(2em + var(--checkbox-switch-gap) * 2);
+  	*/
+  	--checkbox-switch-gap: 0.15rem;
+  	--checkbox-switch-border-radius: 0.15rem;
+}
+
+vaadin-checkbox[theme~="android"],
+vaadin-radio-group[theme~="android"] {
+	--checkbox-switch-gap: 0px;
+	--checkbox-switch-border-radius: var(--checkbox-switch-height);
+	/*
+	--checkbox-switch-border-width: 1px;
+	--checkbox-switch-border-color: var(--checkbox-switch-background-color);
+	*/
+	
+	/*
+	--checkbox-switch-thumb-width: calc(var(--checkbox-switch-width) / 1.75 );
+	--checkbox-switch-width: calc(1.75em + var(--checkbox-switch-gap) * 2);
+	*/
+	
+	/* --checkbox-switch-box-shadow: inset 0 0 0 1px var(--checkbox-switch-background-color, var(--lumo-contrast-40pct) ); */
+	--checkbox-switch-thumb-box-shadow: 0 0 0 0.1rem var(--checkbox-switch-thumb-box-color, var(--lumo-contrast-40pct) );
+	--checkbox-switch-thumb-checked-box-shadow: 0 0 0 0.1rem var(--checkbox-switch-thumb-checked-box-color, var(--lumo-contrast-40pct) );
+}
+
+vaadin-checkbox[theme~="ios"],
+vaadin-radio-group[theme~="ios"] {
+	--checkbox-switch-gap: 0.1rem;
+	--checkbox-switch-border-radius: var(--checkbox-switch-height);
+	/*
+	--checkbox-switch-width: calc(1.75em + var(--checkbox-switch-gap) * 2);
+	--checkbox-switch-thumb-width: calc(var(--checkbox-switch-width) / 1.75 );
+	*/
+
+	--checkbox-switch-thumb-box-shadow: 0 0 2px 0px var(--checkbox-switch-thumb-box-color, var(--lumo-contrast-40pct) );
+	--checkbox-switch-thumb-checked-box-shadow: 0 0 2px 0px var(--checkbox-switch-thumb-checked-box-color, var(--lumo-contrast-40pct) );
+}
+
+gli-slide-tab {
+    --slide-tab-background-color: var(--gli-general-color);
+    --slide-tab-color: var(--gli-general-light-color);
+    /* --slide-tab-active-background-color: var(--gli-general-color); */
+}
+
+/* HACKS */ 
+
+/* RS: Change Autocomplete styles in Chrome (globaly) */
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--gli-general-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--lumo-base-color) inset;
+  box-shadow: 0 0 0px 1000px var(--lumo-base-color) inset;
+  border-top: 1px solid var(--lumo-contrast-30pct);
+  border-bottom: 1px solid var(--lumo-contrast-30pct);
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* RS : Vaadin validation hack */
+vaadin-license-box {
+	display: none !important;
+}
+
+/* Ali: Vaadin Icon / Notification */
+vaadin-devmode-gizmo {
+  visibility: hidden;
+}
+
+

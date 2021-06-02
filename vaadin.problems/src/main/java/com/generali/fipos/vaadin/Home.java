@@ -1,5 +1,6 @@
 package com.generali.fipos.vaadin;
 
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
@@ -8,6 +9,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 
 @SuppressWarnings("serial")
+@CssImport(value = "./styles/gli-styles.css")
 @Route("")
 public class Home extends VerticalLayout {
 	public Home() {
