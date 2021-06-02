@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<vaadin.version>14.4.6</vaadin.version>
+		<vaadin.version>14.6.1</vaadin.version>
 	</properties>
 
 	<repositories>
@@ -74,6 +74,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>com.vaadin</groupId>
+				<artifactId>vaadin-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>prepareFrontend</id>
+						<goals>
+							<goal>prepare-frontend</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
