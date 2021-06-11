@@ -25,8 +25,7 @@
 	
 	<properties>
 		<java.version>11</java.version>
-<!--		<vaadin.version>14.5.5</vaadin.version>  FUNCTIONING -->
- 		<vaadin.version>14.6.1</vaadin.version>
+ 		<vaadin.version>14.6.2</vaadin.version>
 		<spring-boot.version>2.4.5</spring-boot.version>
 	</properties>
 
@@ -56,9 +55,8 @@
 	</dependencyManagement>
 
 	<modules>
-	  	<module>../vaadin-problems</module>
+	  	<module>../vaadin.problems</module>
   		<module>../vaadin-project1</module>
-		<!-- <module>tycho</module> breaks reactor build-->
 	</modules>
 
 </project>
