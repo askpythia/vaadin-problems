@@ -3,6 +3,7 @@ package com.generali.fipos.vaadin;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
@@ -24,5 +25,20 @@ public class Home extends VerticalLayout {
 		add(new RouterLink("Problem in Scrolling to Index in TreeGrid", Dispatcher.class, "TreeGridScrolltoItem"));
 		add(new Paragraph("When a hierarchical TreeGrid is expanded and it is necessary to scroll to an item, that doesn't work, because of the lazy loading. HOW to reproduce: clicking on the Button 'scroll to <TEST>' should scoll to the item <TEST>. But it doesn't (if nodes are expanded). When manually scolling from the end to the beginning and clicking on the button again - it will scroll correctly (maybe after a few tries). Or if the tree is collapsed (recursivly). In the console the NodeIndex of the node is shown, but it doesn't correspond to the rowindex (NodeIndex-1) within the DOM!"));
 		add(new Paragraph("HINT: if the _cache.effectiveSize of the grid is lower than the index of the node to scroll, the node is not reachable. For test a eclipse-console log entry is created which shows the (scrollTo)index and the _cache.effectiveSize value."));
+
+		add(new H2("PROBLEM 3 : Static resources from dependency"));
+		add(new Paragraph("To build and run, use 'mvn clean package -f ..\\vaadin-parent-pom\\pom.xml && java -jar .\\target\\vaadin.problems-0.0.1-SNAPSHOT.jar' in the vaadin.problems module"));
+		add(new Paragraph("Go to http://localhost:8080/demo/"));
+		add(new Paragraph("Observe that all four of the following images are missing, and a lot of 'java.nio.file.FileSystemNotFoundException: Provider \"war\" not installed' in the console"));
+		add(new Paragraph("Now uncomment the dependency unpack in the vaadin.problems pom.xml and build/run again"));
+		add(new Paragraph("Observe a random subset of images missing, and a lot of 'java.nio.file.FileSystemAlreadyExistsException: null'"));
+		add(new Paragraph("Now uncomment the content of vaadin.flow.server.StaticFileServer.java in the vaadin.problems module and build/run again"));
+		add(new Paragraph("Observe that all four images are found and no exceptions get printed to the console"));
+
+		add(new Image("images/system/symbols/gli-foldertree-fill.svg",""));
+		add(new Image("images/system/symbols/gli-foldertree-right-fill.svg",""));
+		add(new Image("images/system/backgrounds/lines.jpg",""));
+		add(new Image("images/system/backgrounds/silver.jpg",""));
+
 	} 
 }

@@ -55,6 +55,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+<!--					<requiresUnpack>-->
+<!--						<dependency>-->
+<!--							<groupId>com.generali.fipos</groupId>-->
+<!--							<artifactId>vaadin-project1</artifactId>-->
+<!--						</dependency>-->
+<!--					</requiresUnpack>-->
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
 				<version>${vaadin.version}</version>
